@@ -1,3 +1,74 @@
+package com.example;
+
+class Book{
+
+    private String title;
+    private String author;
+    private int copies;
+
+    static int count;
+
+    
+    public Book(String title, String author, int copies) {
+        this.title = title;
+        this.author = author;
+        this.copies = copies;
+        count++;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getCopies() {
+        return copies;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setCopies(int copies) {
+        if(copies > 0){
+        this.copies = copies;
+        }
+        else{
+            System.out.println("Negative value can`t be accepted");
+        }
+    }
+
+
+    public void displayBookDetails(){
+
+        System.out.println("title: "+ title);
+        System.out.println("author: "+ author);
+        System.out.println("copies: "+ copies);
+    }
+
+    public static int totalBooks(){
+        return count;
+    }
+
+     
+
+}
+
+
+
+
+
+
+
+
+
 /*
  * Requirements
 Class Definition:
@@ -25,3 +96,5 @@ think about edge cases, such as setting negative values for the number of copies
 After implementing the class, test it with the example usage provided to ensure everything works correctly.
 * 
  */
+
+
